@@ -32,19 +32,3 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 ---vim.keymap.set("n", "<leader>j", ":!clang-format -i %<CR><CR>")
 ---
 
-
--- PLUGINS
---- Telescope
-local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
-vim.keymap.set('n', '<leader>fq', telescope_builtin.quickfix, {})
-vim.keymap.set('n', '<leader>fi', telescope_builtin.lsp_implementations, {})
-vim.keymap.set('n', '<leader>fd', telescope_builtin.lsp_definitions, {})
-vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, {})
-vim.keymap.set('n', '<leader>fS', telescope_builtin.lsp_dynamic_workspace_symbols, {})
-vim.keymap.set('n', '<leader>fG', telescope_builtin.git_files, {})
-vim.keymap.set('n', '<leader>ft', telescope_builtin.treesitter, {})
-
-

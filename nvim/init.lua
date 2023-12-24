@@ -11,27 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
-    'christoomey/vim-tmux-navigator',
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-        end,
-        opts = { }
-    },
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
-}
-require("lazy").setup(plugins, opts)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin-mocha"
+require("lazy").setup("plugins")
 
 require("config")
 require("keybindings")
-require("whichkey")
-require("telescope_config")
