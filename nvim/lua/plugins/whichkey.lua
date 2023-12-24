@@ -5,10 +5,10 @@ return {
         vim.o.timeout = true
         vim.o.timeoutlen = 300
     end,
-    opts = { 
-        plugins = { 
-            spelling = true, 
-            operators = false, 
+    opts = {
+        plugins = {
+            spelling = true,
+            operators = false,
             motions = false,
         },
         key_labels = { ["<leader>"] = "SPC" },
@@ -40,7 +40,7 @@ return {
                 b = "Open sidebar",
                 f = "Open filesystem",
                 g = "Open Git Status",
-                b = "Open Buffers",
+                d = "Open Buffers",
                 s = "Open Symbols",
                 q = "Close sidebar"
             },
