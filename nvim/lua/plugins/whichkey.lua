@@ -12,38 +12,19 @@ return {
             motions = false,
         },
         key_labels = { ["<leader>"] = "SPC" },
+        defaults = {
+            ["<leader>f"] = { name = "+ Find (telescope)" },
+            ["<leader>b"] = { name = "+ Sidebar (Neotree)" },
+            ["<leader>l"] = { name = "+ LSP" },
+            ["<leader>d"] = "Delete without yanking",
+            ["<leader>y"] = "Yank to clipboard",
+            ["<leader>Y"] = "Yank line to clipboard",
+            ["<leader>q"] = "File explorer"
+        }
     },
-    config = function()
+    config = function(_, opts)
         local wk = require("which-key")
-        wk.register({
-            q = "File explorer",
-            y = "Copy selection to clipboard",
-            Y = "Copy line to clipboard",
-            d = "Delete without yanking",
-            -- Telescope
-            f = {
-                name = "Find (Telescope)",
-                f = "Find file",
-                g = "Grep find",
-                b = "Find buffer",
-                q = "Find Quickfix",
-                i = "Find implementations",
-                d = "Find definitions",
-                s = "Find symbols in file",
-                S = "Find symbols in workspace",
-                G = "Find git files",
-                t = "Find in Treesitter"
-            },
-            -- Neotree
-            b = {
-                name = "Neotree",
-                b = "Open sidebar",
-                f = "Open filesystem",
-                g = "Open Git Status",
-                d = "Open Buffers",
-                s = "Open Symbols",
-                q = "Close sidebar"
-            },
-        }, { prefix = "<leader>"})
+        wk.setup(opts)
+        wk.register(opts.defaults)
     end
 }

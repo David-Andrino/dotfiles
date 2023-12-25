@@ -1,9 +1,9 @@
 return {
     {
-        'nvim-telescope/telescope.nvim', 
-        tag = '0.1.5', 
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.5',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        config = function() 
+        config = function()
             local actions = require("telescope.actions")
             require("telescope").setup({
                 defaults = {
@@ -16,16 +16,16 @@ return {
             })
         end,
         keys = {
-            { "<leader>ff", "<Cmd>Telescope find_files<CR>", desc = "" }, 
-            { "<leader>fg", "<Cmd>Telescope live_grep<CR>", desc = "" }, 
-            { "<leader>fb", "<Cmd>Telescope buffers<CR>", desc = "" }, 
-            { "<leader>fq", "<Cmd>Telescope quickfix<CR>", desc = "" }, 
-            { "<leader>fi", "<Cmd>Telescope lsp_implementations<CR>", desc = "" }, 
-            { "<leader>fd", "<Cmd>Telescope lsp_definitions<CR>", desc = "" }, 
-            { "<leader>fs", "<Cmd>Telescope lsp_document_symbols<CR>", desc = "" }, 
-            { "<leader>fS", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "" }, 
-            { "<leader>fG", "<Cmd>Telescope git_files<CR>", desc = "" }, 
-            { "<leader>ft", "<Cmd>Telescope treesitter<CR>", desc = "" }, 
+            { "<leader>ff", "<Cmd>Telescope find_files<CR>", desc = "Find files" },
+            { "<leader>fg", "<Cmd>Telescope live_grep<CR>", desc = "Live grep" },
+            { "<leader>fb", "<Cmd>Telescope buffers<CR>", desc = "Find buffers" },
+            { "<leader>fq", "<Cmd>Telescope quickfix<CR>", desc = "Find quickfix" },
+            { "<leader>fi", "<Cmd>Telescope lsp_implementations<CR>", desc = "Find LSP implementations" },
+            { "<leader>fd", "<Cmd>Telescope lsp_definitions<CR>", desc = "Find LSP definitions" },
+            { "<leader>fs", "<Cmd>Telescope lsp_document_symbols<CR>", desc = "Find document symbols" },
+            { "<leader>fS", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Find workspace symbols" },
+            { "<leader>fG", "<Cmd>Telescope git_files<CR>", desc = "Find git files" },
+            { "<leader>ft", "<Cmd>Telescope treesitter<CR>", desc = "Find treesitter sybols" },
         },
     },
 

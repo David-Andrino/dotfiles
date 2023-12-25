@@ -7,13 +7,13 @@ return {
         "MunifTanjim/nui.nvim",
     },
     keys = {
-        { "<C-b>", "<Cmd>Neotree focus last<CR>", desc="" },
-        { "<leader>bb", "<Cmd>Neotree focus last<CR>", desc="" },
-        { "<leader>bf", "<Cmd>Neotree source=filesystem<CR>", desc="" },
-        { "<leader>bg", "<Cmd>Neotree source=git_status<CR>", desc="" },
-        { "<leader>bd", "<Cmd>Neotree source=buffers<CR>", desc="" },
-        { "<leader>bs", "<Cmd>Neotree source=document_symbols<CR>", desc="" },
-        { "<leader>bq", "<Cmd>Neotree close<CR>", desc="" },
+        { "<C-b>", "<Cmd>Neotree focus last<CR>", desc="Focus last" },
+        { "<leader>bb", "<Cmd>Neotree focus last<CR>", desc="Focus last" },
+        { "<leader>bf", "<Cmd>Neotree source=filesystem<CR>", desc="Open filesystem" },
+        { "<leader>bg", "<Cmd>Neotree source=git_status<CR>", desc="Open git status" },
+        { "<leader>bd", "<Cmd>Neotree source=buffers<CR>", desc="Open buffers" },
+        { "<leader>bs", "<Cmd>Neotree source=document_symbols<CR>", desc="Open document symbols" },
+        { "<leader>bq", "<Cmd>Neotree close<CR>", desc="Close sidebar" },
     },
     opts = {
         sources = {
