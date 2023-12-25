@@ -24,6 +24,14 @@ vim.keymap.set("v", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
+-- Toggle relative numbering
+vim.keymap.set("n", "<leader>n", ":set relativenumber!<CR>")
+vim.keymap.set("n", "<leader>w", ":set wrap!<CR>")
+
+-- Delete whole word
+vim.keymap.set("i", "<C-Del>", "<Esc>ldei")
+vim.keymap.set("i", "<C-H>", "<Esc>ldbi")
+
 ---vim.keymap.set("n", "<leader>f", function()
 ---    vim.lsp.buf.format()
 ---end)

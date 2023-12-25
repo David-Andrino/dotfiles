@@ -19,7 +19,9 @@ return {
             ["<leader>d"] = "Delete without yanking",
             ["<leader>y"] = "Yank to clipboard",
             ["<leader>Y"] = "Yank line to clipboard",
-            ["<leader>q"] = "File explorer"
+            ["<leader>q"] = "File explorer",
+            ["<leader>n"] = "Toggle relative numbers",
+            ["<leader>w"] = "Toggle line wrapping"
         }
     },
     config = function(_, opts)
