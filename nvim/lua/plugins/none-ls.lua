@@ -9,6 +9,5 @@ return {
         })
     end,
     keys = {
-        { "<M-=>", vim.lsp.buf.format, desc = "Format buffer" },
     },
 }
