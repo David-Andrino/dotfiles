@@ -5,10 +5,24 @@ local act = wezterm.action
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.font = wezterm.font 'Cascadia Code NF'
+config.font = wezterm.font_with_fallback {
+    'CaskaydiaCoveNerdFont', 'Cascadia Code NF'
+}
 config.font_size = 18
 
 config.color_scheme = 'Catppuccin Mocha'
+config.window_close_confirmation = 'NeverPrompt'
+config.enable_tab_bar = false
+config.window_decorations = "TITLE | RESIZE"
+config.window_frame = {
+  border_left_width = '0.25cell',
+  border_right_width = '0.25cell',
+  border_bottom_height = '0.12cell',
+  border_left_color = '#555',
+  border_right_color = '#555',
+  border_bottom_color = '#555',
+  border_top_color = '#555',
+}
 
 config.mouse_bindings = {
 	{
@@ -25,6 +39,10 @@ config.mouse_bindings = {
 		end),
 	},
 }
+
+wezterm.on('format-window-title', function()
+    return 'Wezterm'
+end)
 
 -- and finally, return the configuration to wezterm
 return config
