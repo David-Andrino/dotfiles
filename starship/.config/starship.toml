@@ -1,5 +1,5 @@
 format = """
-$username$hostname\n$directory$fill$all$character
+$hostname$directory$fill$all$character
 """
 
 [character]
@@ -266,7 +266,8 @@ format = "\\[[$symbol$workspace]($style)\\]"
 format = "\\[[$time]($style)\\]"
 
 [username]
-format = "\\[[$user]($style)\\] "
+format = ""
+#format = "\\[[$user]($style)\\] "
 
 [vagrant]
 format = "\\[[$symbol($version)]($style)\\]"
