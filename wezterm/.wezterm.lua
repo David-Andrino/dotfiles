@@ -34,6 +34,8 @@ config.switch_to_last_active_tab_when_closing_tab = true
 config.keys = {
    { key = '[',     mods = 'ALT',     action = act.ActivateTabRelative(-1) },
    { key = ']',     mods = 'ALT',     action = act.ActivateTabRelative(1) },
+   { key = '[',     mods = 'ALT|CTRL',action = act.MoveTabRelative(-1) },
+   { key = ']',     mods = 'ALT|CTRL',action = act.MoveTabRelative(1) },
    { key = 'n',     mods = 'ALT',     action = act.SpawnWindow },
    { key = [[\]],   mods = 'ALT',     action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }), },
    { key = [[\]],   mods = 'ALT|CTRL',action = act.SplitVertical({ domain = 'CurrentPaneDomain' }), },
