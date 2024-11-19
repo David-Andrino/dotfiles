@@ -51,6 +51,9 @@ export PATH=$PATH:/home/andrinod/texlive/bin/x86_64-linux
 alias ccat="\cat"
 alias cat=bat
 
-alias ls=exa
+alias ls=eza
 alias lls="\ls"
+alias lg="eza -lah --git -I\".git\""
+alias lt="eza -laT -I\".git\""
+alias lgt="eza -lahT --git -I\".git\""
 
