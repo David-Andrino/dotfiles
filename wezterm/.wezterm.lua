@@ -47,6 +47,15 @@ config.keys = {
    { key = 'h',     mods = 'ALT',     action = act.ActivatePaneDirection('Left') },
    { key = 'l',     mods = 'ALT',     action = act.ActivatePaneDirection('Right') },
    { key = 'p',     mods = 'ALT',     action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }), },
+   { key = 'r',     mods = 'ALT',     action = act.PromptInputLine {
+      description = 'Enter new name for tab',
+      action = wezterm.action_callback(function(window, _, line)
+        if line then
+          window:active_tab():set_title(line)
+        end
+      end),
+    },
+  },
 }
 
 config.mouse_bindings = {
