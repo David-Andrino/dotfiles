@@ -32,28 +32,28 @@ config.show_tab_index_in_tab_bar = false
 config.switch_to_last_active_tab_when_closing_tab = true
 
 config.keys = {
-   { key = '[',     mods = 'ALT',     action = act.ActivateTabRelative(-1) },
-   { key = ']',     mods = 'ALT',     action = act.ActivateTabRelative(1) },
-   { key = '[',     mods = 'ALT|CTRL',action = act.MoveTabRelative(-1) },
-   { key = ']',     mods = 'ALT|CTRL',action = act.MoveTabRelative(1) },
-   { key = 'n',     mods = 'ALT',     action = act.SpawnWindow },
-   { key = [[\]],   mods = 'ALT',     action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }), },
-   { key = [[\]],   mods = 'ALT|CTRL',action = act.SplitVertical({ domain = 'CurrentPaneDomain' }), },
-   { key = 'Enter', mods = 'ALT',     action = act.TogglePaneZoomState },
-   { key = 'w',     mods = 'ALT',     action = act.CloseCurrentPane({ confirm = false }) },
-   { key = 't',     mods = 'ALT',     action = act.SpawnTab('DefaultDomain') },
-   { key = 'k',     mods = 'ALT',     action = act.ActivatePaneDirection('Up') },
-   { key = 'j',     mods = 'ALT',     action = act.ActivatePaneDirection('Down') },
-   { key = 'h',     mods = 'ALT',     action = act.ActivatePaneDirection('Left') },
-   { key = 'l',     mods = 'ALT',     action = act.ActivatePaneDirection('Right') },
-   { key = 'p',     mods = 'ALT',     action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }), },
-   { key = 'r',     mods = 'ALT',     action = act.PromptInputLine {
-      description = 'Enter new name for tab',
-      action = wezterm.action_callback(function(window, _, line)
-        if line then
-          window:active_tab():set_title(line)
-        end
-      end),
+    { key = '[',     mods = 'ALT',     action = act.ActivateTabRelative(-1) },
+    { key = ']',     mods = 'ALT',     action = act.ActivateTabRelative(1) },
+    { key = '[',     mods = 'ALT|CTRL',action = act.MoveTabRelative(-1) },
+    { key = ']',     mods = 'ALT|CTRL',action = act.MoveTabRelative(1) },
+    { key = 'n',     mods = 'ALT',     action = act.SpawnWindow },
+    { key = [[\]],   mods = 'ALT',     action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }), },
+    { key = [[\]],   mods = 'ALT|CTRL',action = act.SplitVertical({ domain = 'CurrentPaneDomain' }), },
+    { key = 'Enter', mods = 'ALT',     action = act.TogglePaneZoomState },
+    { key = 'w',     mods = 'ALT',     action = act.CloseCurrentPane({ confirm = false }) },
+    { key = 't',     mods = 'ALT',     action = act.SpawnTab('DefaultDomain') },
+    { key = 'k',     mods = 'ALT',     action = act.ActivatePaneDirection('Up') },
+    { key = 'j',     mods = 'ALT',     action = act.ActivatePaneDirection('Down') },
+    { key = 'h',     mods = 'ALT',     action = act.ActivatePaneDirection('Left') },
+    { key = 'l',     mods = 'ALT',     action = act.ActivatePaneDirection('Right') },
+    { key = 'p',     mods = 'ALT',     action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }), },
+    { key = 'r',     mods = 'ALT',     action = act.PromptInputLine {
+        description = 'Enter new name for tab',
+        action = wezterm.action_callback(function(window, _, line)
+            if line then
+                window:active_tab():set_title(line)
+            end
+        end),
     },
   },
 }
