@@ -1,0 +1,15 @@
+theme = catppuccin-mocha
+window-theme = auto
+background-opacity = 1
+
+font-family = CaskaydiaCove Nerd Font
+font-size = 16
+
+copy-on-select = false
+cursor-click-to-move = true
+shell-integration = detect
+
+desktop-notifications = true
+mouse-hide-while-typing = true
+
+config-file = keybindings
