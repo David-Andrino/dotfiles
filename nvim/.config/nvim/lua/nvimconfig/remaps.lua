@@ -1,11 +1,14 @@
+local telescope_builtin  = require('telescope.builtin')
+
 local NORMAL_KEYMAP = {
     {"J", "mzJ`z"},
+    { '<C-p>', telescope_builtin.find_files},
 }
 
 local INSERT_KEYMAP = {
     {"jk",      "<Esc>"},
-    {"<C-H>",   "<Esc>ldbi"}, -- Delete previous word
-    {"<C-Del>", "<Esc>ldei"}, -- Delete next word
+    {"<C-H>",   "<Esc>ldbi", desc="Delete previous word" },
+    {"<C-Del>", "<Esc>ldei", desc="Delete next word" },
 }
 
 local VISUAL_KEYMAP = {
@@ -28,7 +31,22 @@ local BASE_WHICH_KEYMAP = {
     },
     { "<leader>n", ":set relativenumber!<CR>",
         desc="Toggle relative numbering"
-    }
+    },
+
+    -- Telescope: Find files
+    { '<leader>f', group = "Telescope (find)" },
+    { '<leader>ff', telescope_builtin.find_files,
+        desc = 'Find files' 
+    },
+    { '<leader>fg', telescope_builtin.live_grep,
+        desc = 'Live grep' 
+    },
+    { '<leader>fG', telescope_builtin.git_files,
+        desc = 'Find in Git' 
+    },
+    { '<leader>fb', telescope_builtin.buffers,
+        desc = 'Find buffers' 
+    },
 }
 
 for i,m in ipairs(NORMAL_KEYMAP) do
