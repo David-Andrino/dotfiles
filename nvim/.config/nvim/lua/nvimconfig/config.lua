@@ -13,3 +13,4 @@ o.signcolumn  = "yes"
 o.wrap          = true
 o.incsearch     = true
 o.termguicolors = true
+o.showmode      = false
