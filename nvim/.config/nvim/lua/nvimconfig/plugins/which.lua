@@ -1,5 +1,9 @@
 return {
     "folke/which-key.nvim",
+	requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        {'echasnovski/mini.nvim'},
+	},
     opts = {
         -- replace = { {"<leader>", "SPC"} },
         plugins = {
