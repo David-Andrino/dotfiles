@@ -1,8 +1,16 @@
 local telescope_builtin  = require('telescope.builtin')
+local multicursor = require('multicursor-nvim')
 
 local NORMAL_KEYMAP = {
     {"J", "mzJ`z"},
     { '<C-p>', telescope_builtin.find_files},
+
+    -- Multicursor management
+    {"<M-C-Up>",   function() multicursor.lineAddCursor(-1) end, desc="Add cursor above" },
+    {"<M-C-k>",    function() multicursor.lineAddCursor(-1) end, desc="Add cursor above" },
+    {"<M-C-Down>", function() multicursor.lineAddCursor(1)  end, desc="Add cursor below" },
+    {"<M-C-j>",    function() multicursor.lineAddCursor(1)  end, desc="Add cursor below" },
+
 }
 
 local INSERT_KEYMAP = {
@@ -47,6 +55,12 @@ local BASE_WHICH_KEYMAP = {
     { '<leader>fb', telescope_builtin.buffers,
         desc = 'Find buffers' 
     },
+
+    -- Multicursor
+    { '<leader>a', multicursor.alignCursors,
+        desc = 'Align cursors',
+        icon = { icon = '󰘠', color = 'blue' }
+    }
 }
 
 for i,m in ipairs(NORMAL_KEYMAP) do
