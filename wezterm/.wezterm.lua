@@ -78,6 +78,6 @@ config.mouse_bindings = {
 --    return 'Wezterm'
 --end)
 --
-config.window_padding = { bottom = '0cell' }
+config.window_padding = { bottom = '0.5cell' }
 
 return config
