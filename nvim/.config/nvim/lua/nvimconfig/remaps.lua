@@ -60,7 +60,28 @@ local BASE_WHICH_KEYMAP = {
     { '<leader>a', multicursor.alignCursors,
         desc = 'Align cursors',
         icon = { icon = '󰘠', color = 'blue' }
-    }
+    },
+
+    -- Gitsigns
+    { '<leader>g', group='Git' },
+    { '<leader>gp', '<cmd>Gitsigns preview_hunk_inline<cr>',
+        desc = 'Preview hunk'
+    },
+    { '<leader>gs', '<cmd>Gitsigns stage_hunk<cr>',
+        desc = 'Stage hunk'
+    },
+    { '<leader>gR', '<cmd>Gitsigns reset_hunk<cr>',
+        desc = 'Restore hunk'
+    },
+    { '<leader>gB', '<cmd>Gitsigns blame<cr>',
+        desc = 'Blame document'
+    },
+    { '<leader>gb', '<cmd>Gitsigns blame_line<cr>',
+        desc = 'Blame line'
+    },
+    { '<leader>gw', '<cmd>Gitsigns toggle_word_diff<cr>',
+        desc = 'Toggle word diff'
+    },
 }
 
 for i,m in ipairs(NORMAL_KEYMAP) do
@@ -73,3 +94,6 @@ for i,m in ipairs(VISUAL_KEYMAP) do
    vim.keymap.set("v", m[1], m[2]) 
 end
 require("which-key").add(BASE_WHICH_KEYMAP)
+
+-- Gitsigns select hunk
+vim.keymap.set({'o', 'x'}, 'ih', '<cmd>Gitsigns select_hunk<cr>')

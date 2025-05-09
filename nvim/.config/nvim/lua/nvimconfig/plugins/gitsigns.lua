@@ -9,7 +9,8 @@ return {
                 topdelete    = { text = '‾' },
                 changedelete = { text = '~' },
                 untracked    = { text = '┆' },
-            }
+            },
+            numhl = true,
         })
     end
 }
