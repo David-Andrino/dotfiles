@@ -1,0 +1,27 @@
+eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias ccat="\cat"
+alias cat=bat
+alias ls=eza
+alias lls="\ls"
+alias lg="eza -lah --git -I\".git\""
+alias lt="eza -laT -I\".git\""
+alias lgt="eza -lahT --git -I\".git\""
+
+alias psrt="ps -eLo pid,rtprio,cls,psr,cmd"
+function cpugrep() {
+    local cpu="$1"
+    echo '     PID  RTPRIO CLS  CPU  CMD'
+    ps -eLo pid,rtprio,cls,psr,cmd | awk -v cpu="$cpu" '{ if ($4 == cpu) { printf "%8s  %6s %3s %4s  %s\n", $1, $2, $3, $4, $5 } }'
+}
+function cpugrepf() {
+    local cpu="$1"
+    echo '     PID  RTPRIO CLS  CPU  CMD'
+    ps -eLo pid,cls,rtprio,psr,cmd | awk -v cpu="$cpu" '$4 == cpu'
+}
+
+watch_queues() {
+    watch -n 1 "ethtool -S $1 | grep _queue_ | grep packets"
+}
