@@ -77,5 +77,7 @@ config.mouse_bindings = {
 --wezterm.on('format-window-title', function()
 --    return 'Wezterm'
 --end)
+--
+config.window_padding = { bottom = '0.5cell' }
 
 return config
