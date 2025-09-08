@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 
 -- Fonts
 config.font = wezterm.font_with_fallback {
-    'CaskaydiaCoveNerdFont', 'Cascadia Code NF'
+    { family = 'ZedMono NFM', weight = 'Medium' }, 'CaskaydiaCoveNerdFont', 'Cascadia Code NF'
 }
 config.font_size = 18
 
