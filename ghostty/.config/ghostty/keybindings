@@ -28,3 +28,7 @@ keybind = alt+6=goto_tab:6
 keybind = alt+7=goto_tab:7
 keybind = alt+8=goto_tab:8
 keybind = alt+9=goto_tab:9
+
+keybind = shift+insert=paste_from_clipboard
+keybind = ctrl+up=jump_to_prompt:-1
+keybind = ctrl+down=jump_to_prompt:+1
