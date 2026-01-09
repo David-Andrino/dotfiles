@@ -1,0 +1,42 @@
+layout {
+    gaps 16
+}
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+window-rule {
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="code"
+    match app-id="zen"
+
+    open-maximized-to-edges true
+    focus-ring {
+        off
+    }
+}
+
+window-rule {
+    match app-id="zen"
+    draw-border-with-background false
+}
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+binds {
+    Mod+Space { 
+        spawn "dms" "ipc" "call" "spotlight" "toggle"; 
+    }
+    Mod+Alt+L {
+        spawn "dms" "ipc" "call" "lock" "lock"
+    }
+}
+
+spawn-at-startup "mako"
+prefer-no-csd
