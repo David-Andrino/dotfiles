@@ -41,7 +41,7 @@
   "controlCenterShowAudioIcon": true,
   "controlCenterShowVpnIcon": true,
   "controlCenterShowBrightnessIcon": false,
-  "controlCenterShowMicIcon": false,
+  "controlCenterShowMicIcon": true,
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
   "showPrivacyButton": true,
@@ -112,7 +112,7 @@
   "lockDateFormat": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
-  "spotlightModalViewMode": "list",
+  "spotlightModalViewMode": "grid",
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
@@ -184,7 +184,7 @@
   "dockBorderColor": "surfaceText",
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
-  "notificationOverlayEnabled": false,
+  "notificationOverlayEnabled": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "enableFprint": false,
@@ -237,7 +237,11 @@
       "enabled": true,
       "position": 0,
       "screenPreferences": [
-        "all"
+        {
+          "name": "HDMI-A-1",
+          "model": "DELL U2414H",
+          "modelIndex": 0
+        }
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
@@ -246,18 +250,34 @@
         "focusedWindow"
       ],
       "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaSize": 1
+        },
+        "clock"
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
-        "cpuUsage",
-        "memUsage",
-        "notificationButton",
-        "battery",
-        "controlCenterButton",
+        {
+          "id": "privacyIndicator",
+          "enabled": true
+        },
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "clipboard",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        },
         {
           "id": "powerMenuButton",
           "enabled": true
@@ -266,8 +286,8 @@
       "spacing": 4,
       "innerPadding": 4,
       "bottomGap": 0,
-      "transparency": 1,
-      "widgetTransparency": 1,
+      "transparency": 0,
+      "widgetTransparency": 0.31,
       "squareCorners": false,
       "noBackground": false,
       "gothCornersEnabled": false,
@@ -278,10 +298,10 @@
       "borderOpacity": 1,
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
-      "widgetOutlineColor": "primary",
-      "widgetOutlineOpacity": 1,
+      "widgetOutlineColor": "secondary",
+      "widgetOutlineOpacity": 0.14,
       "widgetOutlineThickness": 1,
-      "fontScale": 1,
+      "fontScale": 1.32,
       "autoHide": false,
       "autoHideDelay": 250,
       "openOnOverview": false,

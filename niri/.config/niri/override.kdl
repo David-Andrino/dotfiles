@@ -28,6 +28,11 @@ window-rule {
     match is-active=false
     opacity 0.9
 }
+window-rule {
+    match app-id="org.quickshell"
+    match app-id="com.nextcloud.desktopclient.nextcloud"
+    open-floating true
+}
 
 binds {
     Mod+Space { 
@@ -36,7 +41,20 @@ binds {
     Mod+Alt+L {
         spawn "dms" "ipc" "call" "lock" "lock"
     }
+    Mod+E { spawn "dolphin"; }
 }
 
 spawn-at-startup "mako"
 prefer-no-csd
+
+output "HDMI-A-2" {
+    position x=1920 y=0
+}
+output "HDMI-A-1" { 
+    position x=0 y=0
+}
+
+environment {
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+}
