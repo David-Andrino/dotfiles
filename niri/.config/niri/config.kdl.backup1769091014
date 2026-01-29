@@ -597,7 +597,7 @@ include "dms/binds.kdl"
 
 include "override.kdl"
 
-// spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "dms" "run"
 
 include "dms/cursor.kdl"
