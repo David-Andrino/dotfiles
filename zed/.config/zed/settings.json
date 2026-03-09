@@ -1,0 +1,104 @@
+{
+    // Theme & Appearance
+    "ssh_connections": [
+        {
+            "host": "192.168.10.65",
+            "username": "andrinod",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/andrinod"
+                    ]
+                }
+            ]
+        }
+    ],
+    "which_key": {
+        "delay_ms": 200,
+        "enabled": true,
+    },
+    "theme": "One Dark",
+    "icon_theme": "Zed (Default)",
+    "ui_font_size": 16,
+    "buffer_font_size": 18,
+    "buffer_font_features": { "calt": true },
+    "buffer_font_weight": 500,
+    "cursor_blink": false,
+    "cursor_shape": "bar",
+    "tab_size": 4,
+    "soft_wrap": "preferred_line_length",
+    "preferred_line_length": 120,
+    "show_whitespaces": "selection",
+    "minimap": { "show": "never" },
+    "vertical_scroll_margin": 5,
+    "indent_guides": { "enabled": true },
+    "inlay_hints": {
+        "toggle_on_modifiers_press": {
+            "control": true,
+            "alt": true,
+        },
+    },
+
+    // Editor behavior
+    "vim_mode": true,
+    "use_autoclose": true,
+    "ensure_final_newline_on_save": true,
+    "remove_trailing_whitespace_on_save": true,
+    "format_on_save": "on",
+    "linked_edits": true,
+
+    // Vim
+    "vim": {
+        "cursor_shape": {
+            "insert": "bar",
+            "normal": "block",
+            "visual": "block",
+            "replace": "underline",
+        },
+        "use_system_clipboard": "never",
+    },
+
+    // Git
+    "git": {
+        "git_gutter": "tracked_files",
+        "inline_blame": { "enabled": true },
+    },
+
+    // Terminal
+    "terminal": {
+        "font_family": "ZedMono Nerd Font Mono", //"FiraCode Nerd Font Mono",
+        "font_size": 16,
+        "font_features": { "calt": true },
+        "blinking": "terminal_controlled",
+    },
+
+    // LSP / Languages
+    "lsp": {
+        "clangd": {
+            "binary": {
+                "arguments": ["--function-arg-placeholders=0", "--clang-tidy", "--header-insertion=never"],
+            },
+        },
+    },
+    "languages": {
+        "C": {
+            "tab_size": 4,
+            "language_servers": ["clangd", "!c-language-server"],
+        },
+        "C++": {
+            "tab_size": 4,
+            "language_servers": ["clangd", "!c-language-server"],
+        },
+        "VHDL": {
+            "tab_size": 4,
+            "soft_wrap": "none",
+        },
+        "YAML": {
+            "tab_size": 4,
+        },
+        "Python": {
+            "language_servers": ["pyright"],
+        },
+    },
+}

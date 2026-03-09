@@ -1,0 +1,146 @@
+[
+    // ── Suggestions / Autocomplete ────────────────────────────────
+    {
+        "context": "Editor && showing_completions",
+        "bindings": {
+            "tab": "editor::ConfirmCompletion",
+            "shift-tab": "editor::CompletionPrevious",
+        },
+    },
+
+    // ── Insert mode ───────────────────────────────────────────────
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j k": "vim::NormalBefore",
+            "J K": "vim::NormalBefore",
+        },
+    },
+
+    // ── Normal mode ───────────────────────────────────────────────
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "tab": "pane::ActivateNextItem",
+            "shift-tab": "pane::ActivatePrevItem",
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown",
+            "ctrl-b": "workspace::ToggleLeftDock",
+            "K": "editor::Hover",
+            "J": "editor::JoinLines",
+
+            // Tab navigation (mirrors ctrl+] / ctrl+[ from VSCode)
+            "ctrl-]": "pane::ActivateNextItem",
+            "ctrl-[": "pane::ActivatePrevItem",
+
+            // Multi-cursor
+            "ctrl-alt-up": "editor::AddSelectionAbove",
+            "ctrl-alt-down": "editor::AddSelectionBelow",
+
+            // ── space-r: Rename ───────────────────────────────────
+            "space r": "editor::Rename",
+
+            // ── space-q: Close ────────────────────────────────────
+            "space q": "pane::CloseActiveItem",
+            "space Q": "workspace::CloseAllDocks",
+
+            // ── space-w: Wrap ─────────────────────────────────────
+            "space w": "editor::ToggleSoftWrap",
+
+            // ── space-f: Find ─────────────────────────────────────
+            "space f f": "file_finder::Toggle",
+            "space f g": "workspace::NewSearch",
+            "space f s": "project_symbols::Toggle",
+            "space f d": "editor::GoToDefinition",
+            "space f r": "editor::FindAllReferences",
+            "space f u": "editor::FindAllReferences",
+            "space f a": "workspace::NewSearch",
+            "space f o": "outline_panel::ToggleFocus",
+
+            // ── space-b: Sidebar ──────────────────────────────────
+            "space b b": "workspace::ToggleLeftDock",
+            "space b f": "project_panel::ToggleFocus",
+            "space b e": "project_panel::ToggleFocus",
+            "space b g": "scm_panel::ToggleFocus",
+            "space b x": "extensions::Install",
+            "space b o": "outline_panel::ToggleFocus",
+            "space b a": "workspace::ToggleLeftDock",
+            "space b c": "assistant::ToggleFocus",
+            "space b q": "workspace::ToggleLeftDock",
+
+            // ── space-p: Panels ───────────────────────────────────
+            "space p p": "workspace::ToggleBottomDock",
+            "space p t": "workspace::ToggleBottomDock",
+            "space p r": "diagnostics::Deploy",
+
+            // ── space-o: Open ─────────────────────────────────────
+            "space o r": "workspace::OpenRecent",
+            "space o f": "workspace::Open",
+
+            // ── space-t: Tasks / Build ────────────────────────────
+            "space t t": "task::Spawn",
+            "space t l": "task::Rerun",
+            "space t b": ["task::Spawn", { "task_name": "CMake: Build (Debug)" }],
+            "space t B": ["task::Spawn", { "task_name": "CMake: Build (Release)" }],
+            "space t c": ["task::Spawn", { "task_name": "CMake: Configure (Debug)" }],
+            "space t C": ["task::Spawn", { "task_name": "CMake: Configure (Release)" }],
+            "space t r": ["task::Spawn", { "task_name": "CMake: Test" }],
+            "space t x": ["task::Spawn", { "task_name": "CMake: Clean" }],
+
+            // ── space-c: AI / Assistant ───────────────────────────
+            "space c i": "assistant::InlineAssist",
+            "space c c": "assistant::ToggleFocus",
+
+            // ── space-d: Debug ────────────────────────────────────
+            "space d": "debug::Start",
+
+            // ── F-keys ────────────────────────────────────────────
+            "f5": ["task::Spawn", { "task_name": "CMake: Build (Debug)" }],
+            "ctrl-f5": ["task::Spawn", { "task_name": "CMake: Test" }],
+        },
+    },
+
+    // ── Visual mode ───────────────────────────────────────────────
+    {
+        "context": "Editor && vim_mode == visual",
+        "bindings": {
+            "J": "editor::MoveLineDown",
+            "K": "editor::MoveLineUp",
+            "space r": "editor::Rename",
+        },
+    },
+
+    // ── Project Panel (File Explorer) ─────────────────────────────
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "r": "project_panel::RenameFile",
+            "d": "project_panel::Delete",
+            "o": "project_panel::ToggleExpanded",
+            "ctrl-l": "workspace::ActivatePaneRight",
+        },
+    },
+
+    // ── Terminal ──────────────────────────────────────────────────
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "escape": "workspace::ToggleBottomDock",
+        },
+    },
+
+    // ── Global (no context) ───────────────────────────────────────
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-]": "pane::ActivateNextItem",
+            "ctrl-[": "pane::ActivatePrevItem",
+            "ctrl-shift-o": "project_symbols::Toggle",
+        },
+    },
+]
