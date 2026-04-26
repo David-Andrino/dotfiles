@@ -15,6 +15,7 @@
             "J K": "vim::NormalBefore",
             "ctrl-c": "editor::Copy",
             "ctrl-v": "editor::Paste",
+            "ctrl-s": "workspace::Save",
         },
     },
 
@@ -148,6 +149,17 @@
         "context": "VimControl && !menu",
         "bindings": {
             "space": null,
+        },
+    },
+    {
+        "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+        "bindings": {
+            "ctrl-alt-o ctrl-alt-o": "editor::SelectLargerSyntaxNode",
+        },
+    },
+    {
+        "bindings": {
+            "alt-o": "editor::SwitchSourceHeader",
         },
     },
 ]

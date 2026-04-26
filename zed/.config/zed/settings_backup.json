@@ -1,18 +1,5 @@
 {
     // Theme & Appearance
-    "cli_default_open_behavior": "new_window",
-    "project_panel": {
-        "dock": "left"
-    },
-    "outline_panel": {
-        "dock": "left"
-    },
-    "collaboration_panel": {
-        "dock": "left"
-    },
-    "git_panel": {
-        "dock": "left"
-    },
     "edit_predictions": {
         "copilot": {
             "enable_next_edit_suggestions": true,
@@ -20,20 +7,25 @@
         "provider": "copilot",
     },
     "agent_servers": {
-        "claude-acp": {
-            "type": "registry"
+        "claude": {
+            "default_config_options": {
+                "model": "qwen3-coder:30b",
+            },
+            "env": {
+                "ANTHROPIC_BASE_URL": "http://192.168.10.244:11434",
+                "ANTHROPIC_API_KEY": "ollama",
+                "ANTHROPIC_AUTH_TOKEN": "ollama",
+                "ANTHROPIC_DEFAULT_SONNET_MODEL": "qwen3-coder:30b",
+                "ANTHROPIC_MODEL": "qwen3-coder:30b",
+            },
         },
-        "gemini": {
-            "type": "registry"
-        }
     },
     "agent": {
-        "dock": "right",
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-5-mini",
             "enable_thinking": false,
-            "effort": "high",
+            "effort": "high"
         },
         "favorite_models": [],
         "default_profile": "ask",
@@ -51,25 +43,33 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-core"],
-                },
-            ],
+                    "paths": [
+                        "/home/andrinod/nds/nds-core"
+                    ]
+                }
+            ]
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
-                },
-            ],
-        },
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated/./"
+                    ]
+                }
+            ]
+        }
     ],
     "which_key": {
         "delay_ms": 200,
@@ -136,20 +136,16 @@
                 "arguments": ["--function-arg-placeholders=0", "--clang-tidy", "--header-insertion=never"],
             },
         },
-        "texlab": {
-            "settings": {
-                "texlab": {
-                    "build": {
-                        "onSave": true,
-                        "forwardSearchAfter": true,
-                    },
-                    "forwardSearch": {
-                        "executable": "zathura",
-                        "args": ["--synctex-forward", "%l:1:%f", "-x", "zed %%{input}:%%{line}", "%p"],
-                    },
-                },
-            },
-        },
+        // "texlab": {
+        //     "settings": {
+        //         "texlab": {
+        //             "forwardSearch": {
+        //                 "executable": "okular",
+        //                 "args": ["--unique", "file:%p#src:%l%f"],
+        //             },
+        //         },
+        //     },
+        // },
     },
     "languages": {
         "C": {
