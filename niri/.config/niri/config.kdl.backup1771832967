@@ -602,5 +602,3 @@ spawn-at-startup "dms" "run"
 
 include "dms/cursor.kdl"
 include "dms/outputs.kdl"
-
-include "dms/windowrules.kdl"

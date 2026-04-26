@@ -16,7 +16,12 @@ window-rule {
 }
 window-rule {
     match app-id="Zotero"
+    match app-id="OneDriveGUI"
     open-floating true
+    opacity 1.0
+}
+window-rule {
+    match app-id="com.github.IsmaelMartinez.teams_for_linux"
     opacity 1.0
 }
 
@@ -55,10 +60,11 @@ spawn-at-startup "mako"
 prefer-no-csd
 
 environment {
-    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORM "wayland;xcb"
     QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
 debug {
     honor-xdg-activation-with-invalid-serial
 }
+
