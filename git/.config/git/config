@@ -2,7 +2,7 @@
 	excludesFile = ~/.config/git/ignore
 
 [user]
-	email = davidandrino2002@gmail.com
+	email = david.andrino@upm.es
 	name = David Andrino
 
 [alias]
@@ -40,3 +40,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = store
