@@ -40,13 +40,16 @@
             // Multi-cursor
             "ctrl-alt-up": "editor::AddSelectionAbove",
             "ctrl-alt-down": "editor::AddSelectionBelow",
+            "ctrl-alt-j": "editor::AddSelectionBelow",
+            "ctrl-alt-k": "editor::AddSelectionAbove",
+            "space a": "editor::AlignSelections",
 
             // ── space-r: Rename ───────────────────────────────────
             "space r": "editor::Rename",
 
             // ── space-q: Close ────────────────────────────────────
             "space q": "pane::CloseActiveItem",
-            "space Q": "workspace::CloseAllDocks",
+            "space Q": "pane::CloseAllItems",
 
             // ── space-w: Wrap ─────────────────────────────────────
             "space w": "editor::ToggleSoftWrap",
@@ -160,6 +163,18 @@
     {
         "bindings": {
             "alt-o": "editor::SwitchSourceHeader",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-alt-j": "multi_workspace::ToggleWorkspaceSidebar",
+        },
+    },
+    {
+        "context": "AcpThread > Editor",
+        "unbind": {
+            "ctrl-alt-k": "agent::ToggleThinkingMode",
         },
     },
 ]

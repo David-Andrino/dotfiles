@@ -2,16 +2,16 @@
     // Theme & Appearance
     "cli_default_open_behavior": "new_window",
     "project_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "outline_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "collaboration_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "git_panel": {
-        "dock": "left"
+        "dock": "left",
     },
     "edit_predictions": {
         "copilot": {
@@ -21,18 +21,18 @@
     },
     "agent_servers": {
         "claude-acp": {
-            "type": "registry"
+            "type": "registry",
         },
         "gemini": {
-            "type": "registry"
-        }
+            "type": "registry",
+        },
     },
     "agent": {
         "dock": "right",
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-5-mini",
-            "enable_thinking": false,
+            "model": "gpt-5.2",
+            "enable_thinking": true,
             "effort": "high",
         },
         "favorite_models": [],
@@ -51,25 +51,54 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-core"],
-                },
-            ],
+                    "paths": [
+                        "/home/andrinod/nds/nds-core"
+                    ]
+                }
+            ]
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
                 },
-            ],
+                {
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated/./"
+                    ]
+                }
+            ]
         },
+        {
+            "host": "54",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated"
+                    ]
+                }
+            ]
+        }
     ],
     "which_key": {
         "delay_ms": 200,
@@ -78,9 +107,10 @@
     "theme": "Catppuccin Mocha",
     "icon_theme": "Zed (Default)",
     "ui_font_size": 16,
-    "buffer_font_size": 18,
+    "buffer_font_size": 16,
     "buffer_font_features": { "calt": true },
     "buffer_font_weight": 500,
+    "show_wrap_guides": false,
     "cursor_blink": false,
     "cursor_shape": "bar",
     "tab_size": 4,
