@@ -218,10 +218,12 @@
   "appLauncherGridColumns": 7,
   "spotlightCloseNiriOverview": true,
   "spotlightSectionViewModes": {},
-  "appDrawerSectionViewModes": {},
+  "appDrawerSectionViewModes": {
+    "apps": "list"
+  },
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
-  "dankLauncherV2BorderEnabled": false,
+  "dankLauncherV2BorderEnabled": true,
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
@@ -325,8 +327,8 @@
   "matugenTemplateEmacs": true,
   "matugenTemplateZed": true,
   "showDock": true,
-  "dockAutoHide": true,
-  "dockSmartAutoHide": false,
+  "dockAutoHide": false,
+  "dockSmartAutoHide": true,
   "dockGroupByApp": true,
   "dockOpenOnOverview": true,
   "dockPosition": 2,
@@ -340,10 +342,10 @@
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "dockIsolateDisplays": false,
-  "dockLauncherEnabled": false,
+  "dockLauncherEnabled": true,
   "dockLauncherLogoMode": "apps",
   "dockLauncherLogoCustomPath": "",
-  "dockLauncherLogoColorOverride": "",
+  "dockLauncherLogoColorOverride": "surface",
   "dockLauncherLogoSizeOffset": 0,
   "dockLauncherLogoBrightness": 0.5,
   "dockLauncherLogoContrast": 1,
@@ -628,7 +630,11 @@
     }
   },
   "clipboardEnterToPaste": false,
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "emojiLauncher": {
+      "allowWithoutTrigger": true
+    }
+  },
   "launcherPluginOrder": [],
   "configVersion": 5
 }

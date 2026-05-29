@@ -15,6 +15,7 @@
             "J K": "vim::NormalBefore",
             "ctrl-c": "editor::Copy",
             "ctrl-v": "editor::Paste",
+            "ctrl-s": "workspace::Save",
         },
     },
 
@@ -39,13 +40,16 @@
             // Multi-cursor
             "ctrl-alt-up": "editor::AddSelectionAbove",
             "ctrl-alt-down": "editor::AddSelectionBelow",
+            "ctrl-alt-j": "editor::AddSelectionBelow",
+            "ctrl-alt-k": "editor::AddSelectionAbove",
+            "space a": "editor::AlignSelections",
 
             // ── space-r: Rename ───────────────────────────────────
             "space r": "editor::Rename",
 
             // ── space-q: Close ────────────────────────────────────
             "space q": "pane::CloseActiveItem",
-            "space Q": "workspace::CloseAllItemsAndPanes",
+            "space Q": "pane::CloseAllItems",
 
             // ── space-w: Wrap ─────────────────────────────────────
             "space w": "editor::ToggleSoftWrap",
@@ -83,12 +87,12 @@
             // ── space-t: Tasks / Build ────────────────────────────
             "space t t": "task::Spawn",
             "space t l": "task::Rerun",
-            "space t b": ["task::Spawn", { "task_name": "CMake: Build (Debug)" }],
-            "space t B": ["task::Spawn", { "task_name": "CMake: Build (Release)" }],
-            "space t c": ["task::Spawn", { "task_name": "CMake: Configure (Debug)" }],
-            "space t C": ["task::Spawn", { "task_name": "CMake: Configure (Release)" }],
-            "space t r": ["task::Spawn", { "task_name": "CMake: Test" }],
-            "space t x": ["task::Spawn", { "task_name": "CMake: Clean" }],
+            "space t b": [ "task::Spawn", { "task_name": "CMake: Build (Debug)" } ],
+            "space t B": [ "task::Spawn", { "task_name": "CMake: Build (Release)" } ],
+            "space t c": [ "task::Spawn", { "task_name": "CMake: Configure (Debug)" } ],
+            "space t C": [ "task::Spawn", { "task_name": "CMake: Configure (Release)" } ],
+            "space t r": [ "task::Spawn", { "task_name": "CMake: Test" } ],
+            "space t x": [ "task::Spawn", { "task_name": "CMake: Clean" } ],
 
             // ── space-c: AI / Assistant ───────────────────────────
             "space c i": "assistant::InlineAssist",
@@ -98,8 +102,8 @@
             "space d": "debugger::Start",
 
             // ── F-keys ────────────────────────────────────────────
-            "f5": ["task::Spawn", { "task_name": "CMake: Build (Debug)" }],
-            "ctrl-f5": ["task::Spawn", { "task_name": "CMake: Test" }],
+            "f5": [ "task::Spawn", { "task_name": "CMake: Build (Debug)" } ],
+            "ctrl-f5": [ "task::Spawn", { "task_name": "CMake: Test" } ],
         },
     },
 
@@ -153,7 +157,30 @@
     {
         "context": "Editor && extension == tex && vim_mode == normal",
         "bindings": {
-            "space l": ["task::Spawn", { "task_name": "SyncTeX Forward" }],
+            "space l": [ "task::Spawn", { "task_name": "SyncTeX Forward" } ],
+        },
+    },
+    {
+        "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+        "bindings": {
+            "ctrl-alt-o ctrl-alt-o": "editor::SelectLargerSyntaxNode",
+        },
+    },
+    {
+        "bindings": {
+            "alt-o": "editor::SwitchSourceHeader",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-alt-j": "multi_workspace::ToggleWorkspaceSidebar",
+        },
+    },
+    {
+        "context": "AcpThread > Editor",
+        "unbind": {
+            "ctrl-alt-k": "agent::ToggleThinkingMode",
         },
     },
 ]
