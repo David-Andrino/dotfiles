@@ -45,7 +45,7 @@
 
             // ── space-q: Close ────────────────────────────────────
             "space q": "pane::CloseActiveItem",
-            "space Q": "workspace::CloseAllDocks",
+            "space Q": "workspace::CloseAllItemsAndPanes",
 
             // ── space-w: Wrap ─────────────────────────────────────
             "space w": "editor::ToggleSoftWrap",
@@ -148,6 +148,12 @@
         "context": "VimControl && !menu",
         "bindings": {
             "space": null,
+        },
+    },
+    {
+        "context": "Editor && extension == tex && vim_mode == normal",
+        "bindings": {
+            "space l": ["task::Spawn", { "task_name": "SyncTeX Forward" }],
         },
     },
 ]
