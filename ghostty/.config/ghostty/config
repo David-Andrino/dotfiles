@@ -1,7 +1,7 @@
 theme = Wez
 
 font-family = CaskaydiaCove Nerd Font
-font-size = 18
+font-size = 14
 
 right-click-action = copy-or-paste
 

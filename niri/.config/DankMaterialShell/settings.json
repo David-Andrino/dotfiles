@@ -202,7 +202,7 @@
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
   "mediaSize": 1,
-  "appLauncherViewMode": "grid",
+  "appLauncherViewMode": "list",
   "spotlightModalViewMode": "grid",
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {},
@@ -283,7 +283,11 @@
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
   "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
+  "wifiNetworkPins": {
+    "preferredWifi": [
+      "Livebox6-BF2F"
+    ]
+  },
   "bluetoothDevicePins": {
     "preferredDevice": "00:A4:1C:19:74:6F"
   },
@@ -414,7 +418,7 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
-  "displayNameMode": "system",
+  "displayNameMode": "model",
   "screenPreferences": {},
   "showOnLastDisplay": {},
   "niriOutputSettings": {},
@@ -462,6 +466,10 @@
         },
         {
           "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
           "enabled": true
         },
         {

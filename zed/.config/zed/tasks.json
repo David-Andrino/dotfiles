@@ -1,0 +1,23 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+[
+    // {
+    //     "label": "Open LaTeX PDF",
+    //     "command": "zathura \"${ZED_WORKTREE_ROOT}/out/main.pdf\"",
+    //     "reveal": "never",
+    //     "show_summary": false,
+    //     "show_command": false,
+    //     "hide": "always",
+    //     "tags": ["tex"],
+    // },
+    {
+        "label": "SyncTeX Forward",
+        // "command": "zathura --synctex-forward ${ZED_ROW}:${ZED_COLUMN}:${ZED_FILE} \"${ZED_WORKTREE_ROOT}/out/main.pdf\"",
+        "command": "systemd-run --user --no-block zathura --synctex-forward ${ZED_ROW}:${ZED_COLUMN}:${ZED_FILE} \"${ZED_WORKTREE_ROOT}/out/main.pdf\"",
+        "reveal": "never",
+        "show_summary": false,
+        "show_command": false,
+        "hide": "always",
+        "tags": ["tex"],
+        "allow_concurrent_runs": true,
+    },
+]

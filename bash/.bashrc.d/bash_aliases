@@ -30,3 +30,7 @@ function cpugrepf() {
 watch_queues() {
     watch -n 1 "ethtool -S $1 | grep _queue_ | grep packets"
 }
+
+alias forti="sudo openfortivpn -c /etc/openfortivpn/config"
+
+alias source_xilinx="source ~/.local/Xilinx/2025.1/Vivado/settings64.sh && source ~/.local/Xilinx/2025.1/Vitis/settings64.sh"

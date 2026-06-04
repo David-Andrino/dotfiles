@@ -3,6 +3,7 @@
     "debugger": {
         "dock": "left"
     },
+    "diff_view_style": "split",
     "cli_default_open_behavior": "new_window",
     "project_panel": {
         "dock": "left",
@@ -35,7 +36,62 @@
         },
     },
     "agent": {
-        "sidebar_side": "right",
+        "profiles": {
+            "autopilot": {
+                "default_model": {
+                    "provider": "copilot_chat",
+                    "model": "gpt-5.2",
+                    "enable_thinking": true,
+                    "effort": "high",
+                },
+                "name": "Autopilot",
+                "tools": {
+                    "write_file": true,
+                    "update_plan": true,
+                    "terminal": true,
+                    "spawn_agent": true,
+                    "skill": true,
+                    "rename_symbol": true,
+                    "read_file": true,
+                    "move_path": true,
+                    "list_directory": true,
+                    "grep": true,
+                    "go_to_definition": true,
+                    "get_code_actions": true,
+                    "find_references": true,
+                    "find_path": true,
+                    "fetch": true,
+                    "edit_file": true,
+                    "diagnostics": true,
+                    "delete_path": true,
+                    "create_directory": true,
+                    "copy_path": true,
+                    "apply_code_action": true,
+                },
+                "enable_all_context_servers": false,
+                "context_servers": {},
+            },
+        },
+        "tool_permissions": {
+            "tools": {
+                "terminal": {
+                    "always_allow": [
+                        {
+                            "pattern": "^latexmk\\b",
+                        },
+                        {
+                            "pattern": "^tail\\b",
+                        },
+                        {
+                            "pattern": "^grep\\b",
+                        },
+                        {
+                            "pattern": "^head\\b",
+                        },
+                    ],
+                },
+            },
+        },
         "dock": "right",
         "default_model": {
             "effort": "high",
@@ -127,7 +183,7 @@
     "cursor_blink": false,
     "cursor_shape": "bar",
     "tab_size": 4,
-    "soft_wrap": "preferred_line_length",
+    "soft_wrap": "prefer_line",
     "preferred_line_length": 120,
     "show_whitespaces": "selection",
     "minimap": { "show": "never" },
@@ -184,11 +240,7 @@
                 "texlab": {
                     "build": {
                         "onSave": true,
-                        "forwardSearchAfter": true,
-                    },
-                    "forwardSearch": {
-                        "executable": "zathura",
-                        "args": ["--synctex-forward", "%l:1:%f", "-x", "zed %%{input}:%%{line}", "%p"],
+                        "forwardSearchAfter": false,
                     },
                 },
             },
@@ -209,6 +261,15 @@
         },
         "YAML": {
             "tab_size": 4,
+        },
+        "LaTeX": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "tex-fmt",
+                    "arguments": ["--tabsize", "4", "--nowrap", "--stdin"],
+                },
+            },
         },
     },
 }
