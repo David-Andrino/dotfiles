@@ -1,5 +1,8 @@
 {
     // Theme & Appearance
+    "debugger": {
+        "dock": "left"
+    },
     "cli_default_open_behavior": "new_window",
     "project_panel": {
         "dock": "left",
@@ -8,12 +11,16 @@
         "dock": "left",
     },
     "collaboration_panel": {
+        "button": false,
         "dock": "left",
     },
     "git_panel": {
         "dock": "left",
     },
     "edit_predictions": {
+        "ollama": {
+            "model": "gemma4:26b",
+        },
         "copilot": {
             "enable_next_edit_suggestions": true,
         },
@@ -28,12 +35,13 @@
         },
     },
     "agent": {
+        "sidebar_side": "right",
         "dock": "right",
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-5.2",
-            "enable_thinking": true,
             "effort": "high",
+            "provider": "copilot_chat",
+            "model": "gpt-5-mini",
+            "enable_thinking": true,
         },
         "favorite_models": [],
         "default_profile": "write",
@@ -42,6 +50,17 @@
     "language_models": {
         "ollama": {
             "api_url": "http://192.168.10.244:11434",
+            "available_models": [
+                {
+                    "display_name": "Gemma 4",
+                    "keep_alive": "5m",
+                    "supports_thinking": true,
+                    "supports_images": false,
+                    "supports_tools": true,
+                    "name": "gemma4:26b",
+                    "max_tokens": 99999999,
+                },
+            ],
         },
     },
     "ssh_connections": [
@@ -51,54 +70,40 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod"
-                    ]
+                    "paths": ["/home/andrinod"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/nds/nds-core"
-                    ]
-                }
-            ]
+                    "paths": ["/home/andrinod/nds/nds-core"],
+                },
+            ],
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod"
-                    ]
+                    "paths": ["/home/andrinod"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-common"
-                    ]
+                    "paths": ["/home/andrinod/fit/fit-common"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-integrated/./"
-                    ]
-                }
-            ]
+                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
+                },
+            ],
         },
         {
             "host": "54",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-common"
-                    ]
+                    "paths": ["/home/andrinod/fit/fit-common"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-integrated"
-                    ]
-                }
-            ]
-        }
+                    "paths": ["/home/andrinod/fit/fit-integrated"],
+                },
+            ],
+        },
     ],
     "which_key": {
         "delay_ms": 200,
@@ -107,12 +112,12 @@
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "Catppuccin Mocha"
+        "dark": "Catppuccin Mocha",
     },
     "icon_theme": {
         "mode": "dark",
         "light": "Zed (Default)",
-        "dark": "Zed (Default)"
+        "dark": "Zed (Default)",
     },
     "ui_font_size": 16,
     "buffer_font_size": 16,

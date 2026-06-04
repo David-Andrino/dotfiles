@@ -24,7 +24,14 @@ window-rule {
     match app-id="com.github.IsmaelMartinez.teams_for_linux"
     opacity 1.0
 }
-
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    background-effect {
+        blur true
+        xray false
+    }
+    clip-to-geometry true
+}
 window-rule {
     match app-id="code"
     match app-id="zen"

@@ -11,3 +11,6 @@ window-padding-x = 10
 shell-integration-features = ssh-env
 
 config-file = keybindings
+
+background-opacity = 0.85
+background-blur-radius = 0

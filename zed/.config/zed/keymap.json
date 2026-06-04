@@ -177,4 +177,16 @@
             "ctrl-alt-k": "agent::ToggleThinkingMode",
         },
     },
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "ctrl-d": "vim::ScrollDown"
+        }
+    },
+    {
+        "context": "showing_completions",
+        "unbind": {
+            "ctrl-d": "vim::ScrollDown"
+        }
+    }
 ]
