@@ -1,3 +1,5 @@
 set synctex-editor-command "zed %{input}:%{line}:%{column}"
-set highlight-active-color "rgba(0, 0, 0, 0)"
-set highlight-color "rgba(0, 0, 0, 0)"
+set highlight-active-color "rgba(255, 0, 0, 0.5)"
+set highlight-color "rgba(0, 255, 0, 0.5)"
+set highlight-fg "rgba(255, 0, 0, 1.0)"
+#map <Button1> follow

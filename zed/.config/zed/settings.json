@@ -32,6 +32,8 @@
             "type": "registry",
         },
         "gemini": {
+            "default_model": "auto",
+            "default_mode": "yolo",
             "type": "registry",
         },
     },
@@ -126,40 +128,59 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-core"],
+                    "paths": [
+                        "/home/andrinod/nds/nds-core"
+                    ]
                 },
-            ],
+                {
+                    "paths": [
+                        "/home/andrinod/nds/nds-deviceaccess"
+                    ]
+                }
+            ]
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-common"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
-                },
-            ],
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated/./"
+                    ]
+                }
+            ]
         },
         {
             "host": "54",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod/fit/fit-common"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated"],
-                },
-            ],
-        },
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated"
+                    ]
+                }
+            ]
+        }
     ],
     "which_key": {
         "delay_ms": 200,

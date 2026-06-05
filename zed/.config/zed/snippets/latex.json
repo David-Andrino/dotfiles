@@ -1,0 +1,98 @@
+{
+    "Insert a figure": {
+        "prefix": "fig",
+        "body": [
+            "\\begin{figure}[ht]",
+            "    \\centering",
+            "    \\includegraphics[width=0.5\\textwidth]{${1:figure}}",
+            "    \\caption{${2:caption}}",
+            "    \\label{fig:${3:label}}",
+            "\\end{figure}"
+        ],
+        "description": "Insert a figure"
+    },
+    "Insert a table": {
+        "prefix": "table",
+        "body": [
+            "\\begin{table}[H]",
+            "    \\caption{${1:caption}}",
+            "    \\label{tab:${2:label}}",
+            "    \\centering",
+            "    \\begin{tabular}{${3:cols}}",
+            "        \\toprule",
+            "        ${4:content}",
+            "        \\bottomrule",
+            "    \\end{tabular}",
+            "\\end{table}"
+        ],
+        "description": "Insert a table"
+    },
+    "Inline TODO": {
+        "prefix": "itodo",
+        "body": ["\\todo[inline,inlinewidth=0.99\\textwidth]{${1:todo}}"],
+        "description": "Create an Inline TODO"
+    },
+    "Code Listing": {
+        "prefix": "lstlisting",
+        "body": [
+            "\\begin{lstlisting}[language=${2:language},caption={${1:caption}},captionpos=t]",
+            "${3:body}",
+            "\\end{lstlisting}"
+        ],
+        "description": "Create an LST Listing"
+    },
+
+    "Beamer frame": {
+        "prefix": "frame",
+        "body": [
+            "\\begin{frame}",
+            "    \\frametitle{${1:frametitle}}",
+            "    \\begin{columns}[c]",
+            "        \\column{0.5\\textwidth}",
+            "        \\begin{itemize}",
+            "            \\item ${2:framecontent}",
+            "        \\end{itemize}",
+            "        \\column{0.5\\textwidth}",
+            "       \\begin{figure}",
+            "           \\centering",
+            "           \\includegraphics[width=0.8\\textwidth]{${3:image}}",
+            "       \\end{figure}",
+            "    \\end{columns}",
+            "\\end{frame}"
+        ]
+    },
+    "Create an acronym": {
+        "prefix": "acro",
+        "body": ["\\acro {${1:short}}  [${2:acronym}]   {${3:meaning}}"]
+    },
+    "Double figure": {
+        "prefix": "twofig",
+        "body": [
+            "\\begin{figure}[H]",
+            "    \\centering",
+            "    \\begin{subfigure}{0.5\\textwidth}",
+            "        \\includegraphics[width=\\textwidth]{${1:image1}}",
+            "        \\caption{${2:caption1}}",
+            "    \\end{subfigure}%",
+            "    \\begin{subfigure}{0.5\\textwidth}",
+            "        \\includegraphics[width=\\textwidth]{${3:image2}}",
+            "        \\caption{${4:caption2}}",
+            "    \\end{subfigure}",
+            "    \\caption{${5:caption}}",
+            "    \\label{${6:label}}",
+            "\\end{figure}"
+        ]
+    },
+    "Bold text": {
+        "prefix": "bf",
+        "body": ["\\textbf{${1:text}}$0"]
+    },
+    "Italic text": {
+        "prefix": "it",
+        "body": ["\\textit{${1:text}}$0"]
+    },
+    "Monospace text": {
+        "prefix": "tt",
+        "body": ["\\texttt{${1:text}}$0"]
+    }
+}
