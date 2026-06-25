@@ -32,6 +32,7 @@
             "ctrl-b": "workspace::ToggleLeftDock",
             "K": "editor::Hover",
             "J": "editor::JoinLines",
+            "s": "vim::HelixJumpToWord",
 
             // Tab navigation (mirrors ctrl+] / ctrl+[ from VSCode)
             "ctrl-]": "pane::ActivateNextItem",

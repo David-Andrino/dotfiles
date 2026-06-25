@@ -1,7 +1,7 @@
 {
     // Theme & Appearance
     "debugger": {
-        "dock": "left"
+        "dock": "left",
     },
     "diff_view_style": "split",
     "cli_default_open_behavior": "new_window",
@@ -19,9 +19,6 @@
         "dock": "left",
     },
     "edit_predictions": {
-        "ollama": {
-            "model": "gemma4:26b",
-        },
         "copilot": {
             "enable_next_edit_suggestions": true,
         },
@@ -33,7 +30,7 @@
         },
         "gemini": {
             "default_model": "auto",
-            "default_mode": "yolo",
+            "default_mode": "autoEdit",
             "type": "registry",
         },
     },
@@ -96,12 +93,17 @@
         },
         "dock": "right",
         "default_model": {
-            "effort": "high",
-            "provider": "copilot_chat",
-            "model": "gpt-5-mini",
+            "provider": "ollama",
+            "model": "Qwen3",
             "enable_thinking": true,
         },
-        "favorite_models": [],
+        "favorite_models": [
+            {
+                "provider": "ollama",
+                "model": "qwen3.6:27b",
+                "enable_thinking": true
+            }
+        ],
         "default_profile": "write",
         "model_parameters": [],
     },
@@ -117,6 +119,15 @@
                     "supports_tools": true,
                     "name": "gemma4:26b",
                     "max_tokens": 99999999,
+                },
+                {
+                    "display_name": "Qwen 3.6",
+                    "keep_alive": "5m",
+                    "supports_thinking": true,
+                    "supports_images": false,
+                    "supports_tools": true,
+                    "name": "qwen3.6:27b",
+                    "max_tokens": 32768,
                 },
             ],
         },
@@ -177,6 +188,27 @@
                 {
                     "paths": [
                         "/home/andrinod/fit/fit-integrated"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "222",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/andrinod"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/swtools/andrinod/tmpe/tmpe-ml"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/swtools/andrinod/tmpe/tmpe-ml-fwk"
                     ]
                 }
             ]
