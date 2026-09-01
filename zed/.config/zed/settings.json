@@ -16,9 +16,14 @@
         "dock": "left",
     },
     "git_panel": {
+        "group_by": "none",
+        "tree_view": true,
         "dock": "left",
     },
     "edit_predictions": {
+        "ollama": {
+            "model": "qwen3.8:27b",
+        },
         "copilot": {
             "enable_next_edit_suggestions": true,
         },
@@ -94,15 +99,15 @@
         "dock": "right",
         "default_model": {
             "provider": "ollama",
-            "model": "Qwen3",
+            "model": "qwen3.8:27b",
             "enable_thinking": true,
         },
         "favorite_models": [
             {
                 "provider": "ollama",
-                "model": "qwen3.6:27b",
-                "enable_thinking": true
-            }
+                "model": "qwen3.8:27b",
+                "enable_thinking": true,
+            },
         ],
         "default_profile": "write",
         "model_parameters": [],
@@ -121,12 +126,12 @@
                     "max_tokens": 99999999,
                 },
                 {
-                    "display_name": "Qwen 3.6",
+                    "display_name": "Qwen 3.8",
                     "keep_alive": "5m",
                     "supports_thinking": true,
                     "supports_images": false,
                     "supports_tools": true,
-                    "name": "qwen3.6:27b",
+                    "name": "qwen3.8:27b",
                     "max_tokens": 32768,
                 },
             ],
@@ -139,80 +144,61 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod"
-                    ]
+                    "paths": ["/home/andrinod"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/nds/nds-core"
-                    ]
+                    "paths": ["/home/andrinod/nds/nds-core"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/nds/nds-deviceaccess"
-                    ]
-                }
-            ]
+                    "paths": ["/home/andrinod/nds/nds-deviceaccess"],
+                },
+            ],
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod"
-                    ]
+                    "paths": ["/home/andrinod"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-common"
-                    ]
+                    "paths": ["/home/andrinod/fit/fit-common"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-integrated/./"
-                    ]
-                }
-            ]
+                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
+                },
+                {
+                    "paths": ["/home/andrinod/nds/nds-core"],
+                },
+            ],
         },
         {
             "host": "54",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-common"
-                    ]
+                    "paths": ["/home/andrinod/fit/fit-common"],
                 },
                 {
-                    "paths": [
-                        "/home/andrinod/fit/fit-integrated"
-                    ]
-                }
-            ]
+                    "paths": ["/home/andrinod/fit/fit-integrated"],
+                },
+            ],
         },
         {
             "host": "222",
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/andrinod"
-                    ]
+                    "paths": ["/home/andrinod"],
                 },
                 {
-                    "paths": [
-                        "/swtools/andrinod/tmpe/tmpe-ml"
-                    ]
+                    "paths": ["/swtools/andrinod/tmpe/tmpe-ml"],
                 },
                 {
-                    "paths": [
-                        "/swtools/andrinod/tmpe/tmpe-ml-fwk"
-                    ]
-                }
-            ]
-        }
+                    "paths": ["/swtools/andrinod/tmpe/tmpe-ml-fwk"],
+                },
+            ],
+        },
     ],
     "which_key": {
         "delay_ms": 200,
@@ -228,10 +214,12 @@
         "light": "Zed (Default)",
         "dark": "Zed (Default)",
     },
-    "ui_font_size": 16,
-    "buffer_font_size": 16,
+    "ui_font_size": 18,
+    "buffer_font_size": 18,
+    "ui_font_family": "Red Hat Text",
+    "buffer_font_family": "ZedMono Nerd Font",
     "buffer_font_features": { "calt": true },
-    "buffer_font_weight": 500,
+    "buffer_font_weight": 400,
     "show_wrap_guides": false,
     "cursor_blink": false,
     "cursor_shape": "bar",
@@ -271,11 +259,12 @@
     // Git
     "git": {
         "git_gutter": "tracked_files",
-        "inline_blame": { "enabled": true },
+        "inline_blame": { "location": "status_bar", "enabled": true },
     },
 
     // Terminal
     "terminal": {
+        "font_weight": 400.0,
         "font_family": "ZedMono Nerd Font Mono", //"FiraCode Nerd Font Mono",
         "font_size": 16,
         "font_features": { "calt": true },
