@@ -1,0 +1,7 @@
+setupVersion: 2
+disabledProviders:
+  - web
+  - local
+modelRoles:
+  default: strata/qwen3.8-flash-next-iq3_xxs
+hideThinkingBlock: false

@@ -1,0 +1,28 @@
+providers:
+  ollama:
+    baseUrl: http://192.168.10.244:11434/v1
+    api: openai-completions
+    auth: none
+    models:
+      - id: qwen3.8:27b
+        name: qwen3.8-Ollama
+
+  vllm:
+    baseUrl: http://192.168.10.244:8000/v1
+    api: openai-completions
+    auth: none
+    models:
+      - id: RedHatAI/Qwen3.8-27B-INT4
+        name: qwen3.8-vLLM
+        input: [text]
+        contextWindow: 131072
+        maxTokens: 16384
+
+  strata:
+    baseUrl: http://192.168.10.244:8080/v1
+    api: openai-completions
+    auth: none
+    models:
+      - id: qwen3.8-flash-next-iq3_xxs
+        name: qwen3.8-Strata
+        input: [text]
