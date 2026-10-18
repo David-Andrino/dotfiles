@@ -1,5 +1,6 @@
 {
     // Theme & Appearance
+    "proxy": "",
     "debugger": {
         "dock": "left",
     },
@@ -21,6 +22,12 @@
         "dock": "left",
     },
     "edit_predictions": {
+        "open_ai_compatible_api": {
+            "prompt_format": "qwen",
+            "api_url": "",
+            "model": "",
+        },
+        "allow_data_collection": "no",
         "ollama": {
             "model": "qwen3.8:27b",
         },
@@ -98,9 +105,9 @@
         },
         "dock": "right",
         "default_model": {
-            "provider": "ollama",
-            "model": "qwen3.8:27b",
-            "enable_thinking": true,
+            "provider": "Strata",
+            "model": "qwen3.8-flash-next-iq3_xxs",
+            "enable_thinking": false,
         },
         "favorite_models": [
             {
@@ -113,18 +120,51 @@
         "model_parameters": [],
     },
     "language_models": {
+        "openai_compatible": {
+            "Strata": {
+                "api_url": "http://192.168.10.244:8080",
+                "available_models": [
+                    {
+                        "name": "qwen3.8-flash-next-iq3_xxs",
+                        "max_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 128000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false
+                        }
+                    }
+                ]
+            },
+            "vLLM": {
+                "api_url": "http://192.168.10.244:8000/v1",
+                "available_models": [
+                    {
+                        "name": "RedHatAI/Qwen3.8-27B-INT4",
+                        "max_tokens": 131072,
+                        "max_output_tokens": 8192,
+                        "max_completion_tokens": 8192,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": true,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                            "interleaved_reasoning": false,
+                            "max_tokens_parameter": false,
+                        },
+                    },
+                ],
+            },
+        },
         "ollama": {
             "api_url": "http://192.168.10.244:11434",
             "available_models": [
-                {
-                    "display_name": "Gemma 4",
-                    "keep_alive": "5m",
-                    "supports_thinking": true,
-                    "supports_images": false,
-                    "supports_tools": true,
-                    "name": "gemma4:26b",
-                    "max_tokens": 99999999,
-                },
                 {
                     "display_name": "Qwen 3.8",
                     "keep_alive": "5m",
@@ -144,61 +184,115 @@
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-core"],
+                    "paths": [
+                        "/home/andrinod/nds/nds-core"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-deviceaccess"],
-                },
-            ],
+                    "paths": [
+                        "/home/andrinod/nds/nds-deviceaccess"
+                    ]
+                }
+            ]
         },
         {
             "host": "216",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-common"],
+                    "paths": [
+                        "/home/andrinod/crio-i"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated/./"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/nds/nds-core"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated/./"
+                    ]
                 },
-            ],
+                {
+                    "paths": [
+                        "/home/andrinod/interposerProject"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/andrinod/interposerProject/irioCoreCpp/./"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/andrinod/nds/nds-core"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/andrinod/opencode"
+                    ]
+                }
+            ]
         },
         {
             "host": "54",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod/fit/fit-common"],
+                    "paths": [
+                        "/home/andrinod/fit/fit-common"
+                    ]
                 },
                 {
-                    "paths": ["/home/andrinod/fit/fit-integrated"],
-                },
-            ],
+                    "paths": [
+                        "/home/andrinod/fit/fit-integrated"
+                    ]
+                }
+            ]
         },
         {
             "host": "222",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/andrinod"],
+                    "paths": [
+                        "/home/andrinod"
+                    ]
                 },
                 {
-                    "paths": ["/swtools/andrinod/tmpe/tmpe-ml"],
+                    "paths": [
+                        "/swtools/andrinod/microtca/namc_zynqup_fmc_bsp"
+                    ]
                 },
                 {
-                    "paths": ["/swtools/andrinod/tmpe/tmpe-ml-fwk"],
+                    "paths": [
+                        "/swtools/andrinod/tmpe/tmpe-ml"
+                    ]
                 },
-            ],
-        },
+                {
+                    "paths": [
+                        "/swtools/andrinod/tmpe/tmpe-ml-fwk"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/swtools/andrinod/versal/aie"
+                    ]
+                }
+            ]
+        }
     ],
     "which_key": {
         "delay_ms": 200,
