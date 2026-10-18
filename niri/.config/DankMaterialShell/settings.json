@@ -1,4 +1,5 @@
 {
+  "currentThemeName": "monochrome",
   "cornerRadius": 12,
   "niriLayoutRadiusOverride": 4,
   "niriLayoutBorderSize": 1,
@@ -7,6 +8,7 @@
   "controlCenterShowMicIcon": true,
   "showWorkspaceApps": true,
   "maxWorkspaceIcons": 5,
+  "mediaUseAlbumArtAccent": true,
   "runningAppsCurrentWorkspace": false,
   "clockDateFormat": "ddd d, MM",
   "spotlightModalViewMode": "grid",
@@ -15,7 +17,7 @@
     "apps": "list"
   },
   "dankLauncherV2BorderThickness": 6,
-  "launcherStyle": "island",
+  "launcherStyle": "spotlight",
   "spotlightBarShowModeChips": true,
   "weatherEnabled": false,
   "networkPreference": "ethernet",
@@ -156,15 +158,59 @@
       "popupGapsManual": 4,
       "maximizeDetection": true,
       "shadowIntensity": 0,
-      "hoverPopouts": false
+      "hoverPopouts": false,
+      "island": false,
+      "islandReserveThickness": 40,
+      "islandCompactThickness": 32,
+      "islandOuterGap": 2,
+      "islandHomeCompactTight": false,
+      "islandFloating": false,
+      "islandUseOverlayLayer": false,
+      "islandHomeClockDisplay": "both",
+      "islandHomeLayout": [
+        {
+          "id": "media",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": false
+        },
+        {
+          "id": "status",
+          "enabled": false
+        },
+        {
+          "id": "volume",
+          "enabled": false
+        },
+        {
+          "id": "brightness",
+          "enabled": false
+        },
+        {
+          "id": "notifications",
+          "enabled": false
+        }
+      ],
+      "islandPalette": "dim",
+      "islandCornerRadius": 15,
+      "islandInteractionMode": "hybrid"
     },
     {
       "id": "bar1768220640249",
       "name": "Bar 2",
-      "enabled": true,
+      "enabled": false,
       "position": 0,
       "screenPreferences": [
-        "all"
+        {
+          "name": "HDMI-A-2",
+          "model": "DELL U2414H"
+        }
       ],
       "showOnLastDisplay": false,
       "leftWidgets": [],
@@ -176,7 +222,7 @@
       ],
       "rightWidgets": [],
       "spacing": 0,
-      "innerPadding": 17,
+      "innerPadding": 11,
       "bottomGap": -50,
       "transparency": 0,
       "widgetTransparency": 1,
@@ -201,7 +247,10 @@
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "maximizeDetection": true,
-      "shadowIntensity": 0
+      "shadowIntensity": 0,
+      "widgetPadding": 10,
+      "barInsetPadding": 12,
+      "iconScale": 0.88
     }
   ],
   "desktopClockCustomColor": {
@@ -230,20 +279,6 @@
     "hslLightness": 1,
     "valid": true
   },
-  "desktopWidgetInstances": [
-    {
-      "id": "dw_1780642635754_bzqg2zo39",
-      "widgetType": "mediaPlayer",
-      "name": "Media Player",
-      "enabled": true,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "syncPositionAcrossScreens": true
-      }
-    }
-  ],
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
@@ -267,5 +302,5 @@
   "frameRounding": 8,
   "frameColor": "primary",
   "frameMode": "separate",
-  "configVersion": 17
+  "configVersion": 18
 }
